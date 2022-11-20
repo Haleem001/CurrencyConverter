@@ -3,9 +3,9 @@ from telegram.ext import CommandHandler, Updater
 import os
 import requests
 
-from dotenv import load_dotenv
+from Killua01Bot.config import BOT_API_TOKEN
 
-load_dotenv()
+
 
 
 
@@ -16,7 +16,7 @@ import pytz
 
 
 PORT = int(os.environ.get('PORT', 5000))
-TOKEN = os.getenv('BOTAPITOKEN')
+TOKEN = BOT_API_TOKEN
 updater = Updater (token = TOKEN , use_context = True)
 dispatcher = updater.dispatcher
 
